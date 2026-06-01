@@ -2,17 +2,24 @@ Ontwerp en maak een data driven online concept voor een opdrachtgever
 
 De instructies voor deze opdracht staan in: [docs/INSTRUCTIONS.md](https://github.com/fdnd-task/proof-of-concept/blob/main/docs/INSTRUCTIONS.md)
 
-# Titel
+# Decathlon PDP Product Detail Page
 <!-- Geef je project een titel en schrijf in één zin wat het is -->
 
 ## Inhoudsopgave
 
+  * [Links](#links)
   * [Beschrijving](#beschrijving)
   * [Gebruik](#gebruik)
   * [Kenmerken](#kenmerken)
   * [Installatie](#installatie)
   * [Bronnen](#bronnen)
   * [Licentie](#licentie)
+
+## Links
+
+  * [Vitamin Design system](https://icthva-my.sharepoint.com/personal/suleyman_huzeyfe_gokgul_hva_nl/Documents/Microsoft%20Teams%20Chat%20Files/Decathlon%20Brand%20Guidelines%20(2)_260601_213327.pdf?TeamsCID=fe93c7e2-eec8-4e7f-b513-041e43f11658)
+  * [Design Challenge](https://icthva-my.sharepoint.com/personal/suleyman_huzeyfe_gokgul_hva_nl/Documents/Microsoft%20Teams%20Chat%20Files/Decathlon%20PDP%20Challenge%20-%20Full%20Contextpptx_260601_213337.pdf?TeamsCID=ca7e4d07-bea7-46d8-bef0-3d515c2165a0)
+  * [Productpage powerpoint](https://icthva-my.sharepoint.com/personal/suleyman_huzeyfe_gokgul_hva_nl/Documents/Microsoft%20Teams%20Chat%20Files/Student%20project%20-%20Media%20Gallery%20(1)_260601_213351%201.pdf?TeamsCID=884cf9d1-2a7a-423b-b627-edf9c3efb664)
 
 ## Beschrijving
 <!-- Bij Beschrijving staat kort beschreven wat voor project het is en wat je hebt gemaakt -->
