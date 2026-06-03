@@ -64,6 +64,12 @@
   padding: 10px;
   border-radius: 999px;
   width: 90dvw;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+
+  &:focus-within {
+    outline-color: #3643ba;
+  }
 
   .search-icon {
     margin-left: .8em;
@@ -75,7 +81,7 @@
     background: transparent;
     cursor: pointer;
 
-    &:focus::placeholder{
+    &:focus::placeholder {
       opacity: 0;
     }
   }
