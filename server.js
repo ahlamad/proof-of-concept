@@ -1,1 +1,35 @@
-console.log('Hier komt je server voor Sprint 12.')
+import express from "express";
+ 
+// Importeer de Liquid package (ook als dependency via npm geïnstalleerd)
+import { Liquid } from "liquidjs";
+ 
+// Maak een nieuwe Express applicatie aan, waarin we de server configureren
+const app = express();
+ 
+// Maak werken met data uit formulieren iets prettiger
+app.use(express.urlencoded({ extended: true }));
+ 
+// Gebruik de map 'public' voor statische bestanden (resources zoals CSS, JavaScript, afbeeldingen en fonts)
+app.use(express.static("public"));
+ 
+// Stel Liquid in als 'view engine'
+const engine = new Liquid();
+app.engine("liquid", engine.express());
+ 
+app.set("views", "./views");
+ 
+ 
+app.get("/", async function (request, response) {
+ 
+    response.render("index.liquid", { });
+});
+ 
+ 
+// Stel het poortnummer in waar Express op moet gaan luisteren
+app.set("port", process.env.PORT || 8000);
+ 
+app.listen(app.get("port"), function () {
+  console.log(
+    `http://localhost:${app.get("port")}/`,
+  );
+});
