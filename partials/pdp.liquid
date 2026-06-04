@@ -1,42 +1,137 @@
 <h1>Basketball Shoes</h1>
+
+{% comment %} FOR IMG ELEMENT WHEN DYNAMIC {% endcomment %}
+{% comment %} fetchpriority="{% if forloop.first %}high{% else %}auto{% endif %}"
+loading="{% if forloop.first %}eager{% else %}lazy{% endif %}" {% endcomment %}
+
   <ul class="carousel">
-    <li>
-      <img class="carousel_slide" src="https://contents.mediadecathlon.com/p3056661/k$024349b9e45d85cda56c09c74e8d1ce1/picture.jpg?format=auto&amp;f=3000x0" alt="{{ product.name }}" fetchpriority="high" loading="eager" width="300" height="300">
+    <li class="carousel_slide">
+      <picture>
+        <img 
+          src="https://contents.mediadecathlon.com/p3056661/k$024349b9e45d85cda56c09c74e8d1ce1/picture.jpg?format=auto&f=3000x0" 
+          alt="{{ product.name }}" 
+          fetchpriority="high" 
+          loading="eager" 
+          width="300" 
+          height="300"
+        >
+      </picture>
     </li>
 
-    <li>
-      <img class="carousel_slide" src="https://contents.mediadecathlon.com/p3056568/k$1199b551cf9e53046d278831889381a9/picture.jpg?format=auto&amp;f=3000x0" alt="Men's/Women's Low Basketball Shoes Fast 500 - White 2/11" fetchpriority="auto" loading="lazy" width="300" height="300">
+    <li class="carousel_slide">
+      <picture>
+        <img 
+          src="https://contents.mediadecathlon.com/p3056568/k$1199b551cf9e53046d278831889381a9/picture.jpg?format=auto&f=3000x0" 
+          alt="Men's/Women's Low Basketball Shoes Fast 500 - White 2/11" 
+          fetchpriority="auto" 
+          loading="lazy" 
+          width="300" 
+          height="300"
+        >
+      </picture>
     </li>
 
-    <li>
-      <img class="carousel_slide" src="https://contents.mediadecathlon.com/p3056794/k$548d28576089b2ba9a878cf0a407f290/picture.jpg?format=auto&amp;f=3000x0" alt="Men's/Women's Low Basketball Shoes Fast 500 - White 3/11" fetchpriority="auto" loading="lazy" width="300" height="300">
+    <li class="carousel_slide">
+      <picture>
+        <img 
+          src="https://contents.mediadecathlon.com/p3056794/k$548d28576089b2ba9a878cf0a407f290/picture.jpg?format=auto&f=3000x0" 
+          alt="Men's/Women's Low Basketball Shoes Fast 500 - White 3/11" 
+          fetchpriority="auto" 
+          loading="lazy" 
+          width="300" 
+          height="300"
+        >
+      </picture>
     </li>
 
-    <li>
-      <img class="carousel_slide" src="https://contents.mediadecathlon.com/p3056568/k$1199b551cf9e53046d278831889381a9/picture.jpg?format=auto&amp;f=3000x0" alt="Men's/Women's Low Basketball Shoes Fast 500 - White 2/11" fetchpriority="auto" loading="lazy" width="300" height="300">
-    </li>
-    
-    <li>
-      <img class="carousel_slide" src="https://contents.mediadecathlon.com/p3056568/k$1199b551cf9e53046d278831889381a9/picture.jpg?format=auto&amp;f=3000x0" alt="Men's/Women's Low Basketball Shoes Fast 500 - White 2/11" fetchpriority="auto" loading="lazy" width="300" height="300">
-    </li>
-
-    <li>
-      <img class="carousel_slide" src="https://contents.mediadecathlon.com/p3056568/k$1199b551cf9e53046d278831889381a9/picture.jpg?format=auto&amp;f=3000x0" alt="Men's/Women's Low Basketball Shoes Fast 500 - White 2/11" fetchpriority="auto" loading="lazy" width="300" height="300">
-    </li>
-
-    <li>
-      <img class="carousel_slide" src="https://contents.mediadecathlon.com/p3056568/k$1199b551cf9e53046d278831889381a9/picture.jpg?format=auto&amp;f=3000x0" alt="Men's/Women's Low Basketball Shoes Fast 500 - White 2/11" fetchpriority="auto" loading="lazy" width="300" height="300">
+    <li class="carousel_slide">
+      <picture>
+        <img 
+          src="https://contents.mediadecathlon.com/p3056568/k$1199b551cf9e53046d278831889381a9/picture.jpg?format=auto&f=3000x0" 
+          alt="Men's/Women's Low Basketball Shoes Fast 500 - White 4/11" 
+          fetchpriority="auto" 
+          loading="lazy" 
+          width="300" 
+          height="300"
+        >
+      </picture>
     </li>
 
-    <li>
-      <img class="carousel_slide" src="https://contents.mediadecathlon.com/p3056568/k$1199b551cf9e53046d278831889381a9/picture.jpg?format=auto&amp;f=3000x0" alt="Men's/Women's Low Basketball Shoes Fast 500 - White 2/11" fetchpriority="auto" loading="lazy" width="300" height="300">
+    <li class="carousel_slide">
+      <picture>
+        <img 
+          src="https://contents.mediadecathlon.com/p3056568/k$1199b551cf9e53046d278831889381a9/picture.jpg?format=auto&f=3000x0" 
+          alt="Men's/Women's Low Basketball Shoes Fast 500 - White 5/11" 
+          fetchpriority="auto" 
+          loading="lazy" 
+          width="300" 
+          height="300"
+        >
+      </picture>
     </li>
 
-    <li>
-      <img class="carousel_slide" src="https://contents.mediadecathlon.com/p3056568/k$1199b551cf9e53046d278831889381a9/picture.jpg?format=auto&amp;f=3000x0" alt="Men's/Women's Low Basketball Shoes Fast 500 - White 2/11" fetchpriority="auto" loading="lazy" width="300" height="300">
+    <li class="carousel_slide">
+      <picture>
+        <img 
+          src="https://contents.mediadecathlon.com/p3056568/k$1199b551cf9e53046d278831889381a9/picture.jpg?format=auto&f=3000x0" 
+          alt="Men's/Women's Low Basketball Shoes Fast 500 - White 6/11" 
+          fetchpriority="auto" 
+          loading="lazy" 
+          width="300" 
+          height="300"
+        >
+      </picture>
     </li>
 
-    <li>
-      <img class="carousel_slide" src="https://contents.mediadecathlon.com/p3056568/k$1199b551cf9e53046d278831889381a9/picture.jpg?format=auto&amp;f=3000x0" alt="Men's/Women's Low Basketball Shoes Fast 500 - White 2/11" fetchpriority="auto" loading="lazy" width="300" height="300">
+    <li class="carousel_slide">
+      <picture>
+        <img 
+          src="https://contents.mediadecathlon.com/p3056568/k$1199b551cf9e53046d278831889381a9/picture.jpg?format=auto&f=3000x0" 
+          alt="Men's/Women's Low Basketball Shoes Fast 500 - White 7/11" 
+          fetchpriority="auto" 
+          loading="lazy" 
+          width="300" 
+          height="300"
+        >
+      </picture>
+    </li>
+
+    <li class="carousel_slide">
+      <picture>
+        <img 
+          src="https://contents.mediadecathlon.com/p3056568/k$1199b551cf9e53046d278831889381a9/picture.jpg?format=auto&f=3000x0" 
+          alt="Men's/Women's Low Basketball Shoes Fast 500 - White 8/11" 
+          fetchpriority="auto" 
+          loading="lazy" 
+          width="300" 
+          height="300"
+        >
+      </picture>
+    </li>
+
+    <li class="carousel_slide">
+      <picture>
+        <img 
+          src="https://contents.mediadecathlon.com/p3056568/k$1199b551cf9e53046d278831889381a9/picture.jpg?format=auto&f=3000x0" 
+          alt="Men's/Women's Low Basketball Shoes Fast 500 - White 9/11" 
+          fetchpriority="auto" 
+          loading="lazy" 
+          width="300" 
+          height="300"
+        >
+      </picture>
+    </li>
+
+    <li class="carousel_slide">
+      <picture>
+        <img 
+          src="https://contents.mediadecathlon.com/p3056568/k$1199b551cf9e53046d278831889381a9/picture.jpg?format=auto&f=3000x0" 
+          alt="Men's/Women's Low Basketball Shoes Fast 500 - White 10/11" 
+          fetchpriority="auto" 
+          loading="lazy" 
+          width="300" 
+          height="300"
+        >
+      </picture>
     </li>
   </ul>
