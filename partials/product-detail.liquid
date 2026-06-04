@@ -1,4 +1,7 @@
-<h1>Basketball Shoes</h1>
+  <div class="product-detail-title">
+    <h1>Basketball Shoes</h1>
+    <img src="/assets/images/product-name-logo.svg" class="dots-logo" alt="" width="16" height="16">
+  </div>
 
 {% comment %} FOR IMG ELEMENT WHEN DYNAMIC {% endcomment %}
 {% comment %} fetchpriority="{% if forloop.first %}high{% else %}auto{% endif %}"
@@ -136,18 +139,19 @@ loading="{% if forloop.first %}eager{% else %}lazy{% endif %}" {% endcomment %}
     </li>
   </ul>
 
-<h2 class="brand-name">KIPSTA</h2>
-<h3 class="product-name">Men's/Women's Low Basketball Shoes Fast 500 - White</h3>
+<section class="product-info">
+  <h2 class="brand-name">KIPSTA</h2>
+  <h3 class="product-name">Men's/Women's Low Basketball Shoes Fast 500 - White</h3>
 
-<div class="review-rating">
-  <span>★★★★☆</span>
-  <span class="rating_count">| 4 reviews</span>
-</div>
+  <div class="review-rating">
+    <span>★★★★☆</span>
+    <span class="rating_count">| 4 reviews</span>
+  </div>
 
-<p>These lightweight basketball shoes offer excellent traction and support for sharp directional changes on the court. Drive straight to the rim!</p>
+  <p>These lightweight basketball shoes offer excellent traction and support for sharp directional changes on the court. Drive straight to the rim!</p>
 
-<h4>ID 8974697</h4>
-
+  <h4>ID 8974697</h4>
+</section>
 <div class="select-wrapper">
   <label for="size">Size</label>
     <select class="select" id="size" name="size-select">
