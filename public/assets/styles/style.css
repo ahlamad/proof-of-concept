@@ -113,12 +113,16 @@ main {
     gap: .5em;
     padding-bottom: .8em;
 
-    h1 {
-      grid-area: title;
-      font-weight: 500;
-      font-size: 14px;
-      color: #616161;
-      line-height: 1.4286;
+    a {
+      text-decoration: unset;
+
+      h1 {
+        grid-area: title;
+        font-weight: 500;
+        font-size: 14px;
+        color: #616161;
+        line-height: 1.4286;
+      }
     }
 
     .dots-logo {

@@ -1,5 +1,7 @@
   <div class="product-detail-title">
-    <h1>Basketball Shoes</h1>
+    <a href="https://www.decathlon.co.uk/sports/basketball/basketball-shoes">
+      <h1>Basketball Shoes</h1>
+    </a>
     <img src="/assets/images/product-name-logo.svg" class="dots-logo" alt="" width="16" height="16">
   </div>
 
@@ -140,8 +142,8 @@ loading="{% if forloop.first %}eager{% else %}lazy{% endif %}" {% endcomment %}
   </ul>
 
 <section class="product-info">
-  <h2 class="brand-name">KIPSTA</h2>
-  <h3 class="product-name">Men's/Women's Low Basketball Shoes Fast 500 - White</h3>
+  <p class="brand-name">KIPSTA</p>
+  <h2 class="product-name">Men's/Women's Low Basketball Shoes Fast 500 - White</h2>
 
   <div class="review-rating">
     <span>★★★★☆</span>
@@ -150,7 +152,7 @@ loading="{% if forloop.first %}eager{% else %}lazy{% endif %}" {% endcomment %}
 
   <p>These lightweight basketball shoes offer excellent traction and support for sharp directional changes on the court. Drive straight to the rim!</p>
 
-  <h4>ID 8974697</h4>
+  <p class="product-id">ID 8974697</p>
 </section>
 <div class="select-wrapper">
   <label for="size">Size</label>
@@ -171,7 +173,8 @@ loading="{% if forloop.first %}eager{% else %}lazy{% endif %}" {% endcomment %}
 
 <div class="input-wrapper">
   <button class="minus">-</button>
-    <input type="number" value="1" class="quantity"/>
+    <label for="quantity">Quantity</label>
+    <input type="number" value="1" class="quantity" id="quantity" min="1">
   <button class="plus">+</button>
 </div>
 
