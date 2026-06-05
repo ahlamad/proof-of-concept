@@ -18,10 +18,21 @@ app.engine("liquid", engine.express());
  
 app.set("views", "./views");
  
- 
+// PDP //
 app.get("/", async function (request, response) {
- 
-    response.render("index.liquid", { });
+  const productParams = {};
+
+  const productResponse = await fetch(
+    "https://fdnd-agency.directus.app/items/decathlon_products/8974697?fields=*.*" +
+      new URLSearchParams(productParams),
+  );
+
+  const productResponseJSON = await productResponse.json();
+
+  const productData = productResponseJSON.data;
+    response.render("index.liquid", { 
+      product: productData
+    });
 });
  
  

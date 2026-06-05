@@ -5,23 +5,36 @@
     <img src="/assets/images/product-name-logo.svg" class="dots-logo" alt="" width="16" height="16">
   </div>
 
-{% comment %} FOR IMG ELEMENT WHEN DYNAMIC {% endcomment %}
-{% comment %} fetchpriority="{% if forloop.first %}high{% else %}auto{% endif %}"
-loading="{% if forloop.first %}eager{% else %}lazy{% endif %}" {% endcomment %}
-
   <ul class="carousel">
+    {% comment %} {% for image in product.images %} {% endcomment %}
     <li class="carousel_slide">
       <picture>
+        {% comment %} <source 
+          srcset="{{ image.url }}?format=avif&width=300" 
+          type="image/avif"
+        >
+
+        <source 
+          srcset="{{ image.url }}?format=webp&width=300" 
+          type="image/webp"
+        > {% endcomment %}
+
         <img 
           src="https://contents.mediadecathlon.com/p3056661/k$024349b9e45d85cda56c09c74e8d1ce1/picture.jpg?format=auto&f=3000x0" 
-          alt="{{ product.name }}" 
-          fetchpriority="high" 
-          loading="eager" 
+          alt="{{ product.name }}"
+          alt="{{ product.title }}" 
+          fetchpriority="{% if forloop.first %}high{% else %}auto{% endif %}"
+          loading="{% if forloop.first %}eager{% else %}lazy{% endif %}" 
           width="300" 
           height="300"
         >
       </picture>
     </li>
+    {% comment %} {% endfor %} {% endcomment %}
+</ul>
+{% comment %} 
+ deze erin zetten als fotos in directus staan
+    //src="{{ image.url }}?width=300" //
 
     <li class="carousel_slide">
       <picture>
@@ -139,32 +152,33 @@ loading="{% if forloop.first %}eager{% else %}lazy{% endif %}" {% endcomment %}
         >
       </picture>
     </li>
-  </ul>
+  </ul> {% endcomment %}
 
 <section class="product-info">
-  <p class="brand-name">KIPSTA</p>
-  <h2 class="product-name">Men's/Women's Low Basketball Shoes Fast 500 - White</h2>
+  <p class="brand-name">{{ product.brand }}</p>
+  <h2 class="product-name">{{ product.title }}</h2>
 
   <div class="review-rating">
     <span>★★★★☆</span>
     <span class="rating_count">| 4 reviews</span>
   </div>
 
-  <p>These lightweight basketball shoes offer excellent traction and support for sharp directional changes on the court. Drive straight to the rim!</p>
+  <p>{{ product.summary }}</p>
 
-  <p class="product-id">ID 8974697</p>
+  <p class="product-id">ID {{ product.id }}</p>
 </section>
 <div class="select-wrapper">
   <label for="size">Size</label>
-    <select class="select" id="size" name="size-select">
-      <option value="" disabled selected hidden >Select</option>
-        <option value="UK 4 - EU 37">UK 4 - EU 37</option>
-        <option value="UK 5 - EU 38">UK 5 - EU 38</option>
-        <option value="UK 6 - EU 39">UK 6 - EU 39</option>
-        <option value="UK 7 - EU 40">UK 7 - EU 40</option>
-        <option value="UK 8 - EU 41">UK 8 - EU 41</option>
-        <option value="UK 9 - EU 42">UK 9 - EU 42</option>
-    </select>
+  <select class="select" id="size" name="size-select">
+    <option value="" disabled selected hidden>Select</option>
+    {% for size in product.sizes %}
+      {% if size.available %}
+        <option value="EU {{ size.size }}">EU {{ size.size }}</option>
+      {% else %}
+        <option value="EU {{ size.size }}" disabled>EU {{ size.size }} - Sold out</option>
+      {% endif %}
+    {% endfor %}
+  </select>
 </div>
 
 <button popovertarget="size-guide">Size guide</button>
@@ -178,6 +192,6 @@ loading="{% if forloop.first %}eager{% else %}lazy{% endif %}" {% endcomment %}
   <button class="plus">+</button>
 </div>
 
-<p>$40.00</p>
+<p>${{ product.price }}</p>
 
 <button type="submit" class="add-to-cart-button">Add to basket</button>
