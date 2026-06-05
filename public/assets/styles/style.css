@@ -27,6 +27,7 @@
   }
 }
 
+/* HEADER */
 .header-list {
   display: grid;
   grid-template-columns: auto 1fr auto auto;
@@ -51,14 +52,20 @@
   .logo {
     grid-area: logo;
     padding: 5.5px;
+    display: flex;
+    place-items: center;
   }
 
   .account {
     grid-area: account;
+    display: flex;
+    place-items: center;
   }
 
   .cart {
     grid-area: cart;
+    display: flex;
+    place-items: center;
   }
 
   .search {
