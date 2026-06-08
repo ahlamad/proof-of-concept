@@ -1,4 +1,6 @@
 @font-face {
     font-family: 'Decathlon VF';
-    src: url('/assets/font/Decathlon-VF.woff2');
+    src: url('/assets/font/Decathlon-VF.woff2') format('woff2');
+    font-display: swap;
+    fallback: 'Inter';
 }
