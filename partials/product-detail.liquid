@@ -21,31 +21,35 @@
   <p class="product-id">ID {{ product.id }}</p>
 </section>
 
-<div class="select-wrapper">
-  <label for="size">Size</label>
-  <select class="select" id="size" name="size-select">
-    <option value="" disabled selected hidden>Select</option>
-    {% for size in product.sizes %}
-      {% if size.available %}
-        <option value="EU {{ size.size }}">EU {{ size.size }}</option>
-      {% else %}
-        <option value="EU {{ size.size }}" disabled>EU {{ size.size }} - Sold out</option>
-      {% endif %}
-    {% endfor %}
-  </select>
-</div>
-
+{% comment %} SIZE GUIDE POPOVER = WONT HAVE {% endcomment %}
 <button popovertarget="size-guide">Size guide</button>
-
 <p popover id="size-guide">Size guide</p>
 
-<div class="input-wrapper">
-  <button class="minus">-</button>
+<form action="/cart/add" method="post">
+  <input type="hidden" name="product_id" value="{{ product.id }}">
+
+  <div class="select-wrapper">
+    <label for="size">Size</label>
+    <select class="select" id="size" name="size">
+      <option value="" disabled selected hidden>Select</option>
+      {% for size in product.sizes %}
+        {% if size.available %}
+          <option value="EU {{ size.size }}">EU {{ size.size }}</option>
+        {% else %}
+          <option value="EU {{ size.size }}" disabled>EU {{ size.size }} - Sold out</option>
+        {% endif %}
+      {% endfor %}
+    </select>
+  </div>
+
+  <div class="input-wrapper">
+    <button class="minus" type="button">-</button>
     <label for="quantity">Quantity</label>
-    <input type="number" value="1" class="quantity" id="quantity" min="1">
-  <button class="plus">+</button>
-</div>
+    <input type="number" value="1" class="quantity" id="quantity" name="quantity" min="1">
+    <button class="plus" type="button">+</button>
+  </div>
 
-<p>${{ product.price }}</p>
+  <p>${{ product.price }}</p>
 
-<button type="submit" class="add-to-cart-button">Add to basket</button>
+  <button type="submit" class="add-to-cart-button">Add to basket</button>
+</form>

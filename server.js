@@ -20,11 +20,9 @@ app.set("views", "./views");
  
 // PDP //
 app.get("/", async function (request, response) {
-  const productParams = {};
 
   const productResponse = await fetch(
-    "https://fdnd-agency.directus.app/items/decathlon_products/8974697?fields=*.*" +
-      new URLSearchParams(productParams),
+    "https://fdnd-agency.directus.app/items/decathlon_products/8974697?fields=*.*"
   );
 
   const productResponseJSON = await productResponse.json();
