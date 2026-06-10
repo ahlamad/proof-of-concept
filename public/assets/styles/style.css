@@ -155,7 +155,8 @@ main {
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
     anchor-name: --carousel;
-  
+    gap: 1em;
+    
     scroll-marker-group: after;
 
     &::scroll-marker-group {
@@ -172,17 +173,32 @@ main {
     .carousel_slide {
       scroll-snap-align: center;
 
+      img {
+        height: auto;
+        object-fit: cover;
+        aspect-ratio: 1/1;
+      }
+
       &::scroll-marker {
         content: '';
         width: 10px;
         height: 10px;
         background: #E3E6FC;
-        border-radius: 50%;
+        border-radius: 50px;
+        transition: .6s ease-in-out;
       }
 
       &::scroll-marker:target-current {
         background: #3643ba;
+        width: 15px;
+        border-radius: 20px;
+        transition: .6s ease-in-out;
+        left: 1;      
       }
+    }
+
+    &::-webkit-scrollbar {
+      overflow-x: hidden;
     }
   }
 

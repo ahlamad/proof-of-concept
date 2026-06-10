@@ -3,17 +3,18 @@
     <li class="carousel_slide">
       <picture>
         <source 
-          srcset="https://fdnd-agency.directus.app/assets/{{ image.directus_files_id }}?format=avif&width=300" 
+          srcset="https://fdnd-agency.directus.app/assets/{{ image.directus_files_id }}?format=avif&width=300, https://fdnd-agency.directus.app/assets/{{ image.directus_files_id }}?format=avif&width=600 2x" 
           type="image/avif"
         >
 
         <source 
-          srcset="https://fdnd-agency.directus.app/assets/{{ image.directus_files_id }}?format=webp&width=300" 
+          srcset="https://fdnd-agency.directus.app/assets/{{ image.directus_files_id }}?format=webp&width=300, https://fdnd-agency.directus.app/assets/{{ image.directus_files_id }}?format=webp&width=600 2x" 
           type="image/webp"
         > 
 
         <img 
           src="https://fdnd-agency.directus.app/assets/{{ image.directus_files_id }}?width=300" 
+          srcset="https://fdnd-agency.directus.app/assets/{{ image.directus_files_id }}?width=600 2x" 
           alt="{{ product.title }}" 
           fetchpriority="{% if forloop.first %}high{% else %}auto{% endif %}"
           loading="{% if forloop.first %}eager{% else %}lazy{% endif %}" 
