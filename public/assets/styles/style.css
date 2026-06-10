@@ -17,6 +17,9 @@
   width: 1px;
 }
 
+.header {
+  padding-bottom: 13px;
+
 .promo-bar {
   background: #3643ba;
   color: #FFFFFF;
@@ -39,6 +42,8 @@
 }
 
 /* HEADER */
+.nav-bar {
+
 .header-list {
   display: grid;
   grid-template-columns: auto 1fr auto auto;
@@ -49,7 +54,7 @@
   align-items: center;
   justify-items: center;
   gap: 10px;
-  padding: 10px;
+  padding: 15px;
 
   .menu {
     grid-area: menu;
@@ -78,15 +83,14 @@
     display: flex;
     place-items: center;
   }
-
-  .search {
-    grid-area: search;
-  }
+}
 }
 
+/* SEARCH */
 .search-wrapper {
   display: flex;
   align-items: center;
+  place-self: center;
   gap: 8px;
   background: #F5F4F5;
   padding: 10px;
@@ -103,6 +107,11 @@
 
   .search-icon {
     margin-left: .8em;
+    color: #101010 ;
+  }
+
+  .search-label {
+    color: #101010 ;
   }
 
   input {
@@ -115,6 +124,7 @@
       opacity: 0;
     }
   }
+}
 }
 
 /* PRODUCT INFO SECTION */

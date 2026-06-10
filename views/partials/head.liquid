@@ -11,11 +11,11 @@
   <body>
     <header class="header">
 
-        <div class="promo-bar">
+        <aside class="promo-bar">
             <p>Unlock exclusive discounts and offers - only on the Decathlon App!
                 <a href="#">Download now</a>
             </p>
-        </div>
+        </aside>
 
         <nav class="nav-bar">
             <ul class="header-list">
@@ -28,7 +28,7 @@
 
                 <li class="logo-item">
                     <a class="decathlon-logo" href="/">
-                        <img src="/assets/images/decathlon-logo.svg" alt="Decathlon logo" class="logo-img" width="188" height="28">
+                        <img src="/assets/images/decathlon-logo.svg" alt="Decathlon" class="logo-img" width="188" height="28">
                     </a>
                 </li>
 
@@ -43,15 +43,14 @@
                         <img src="/assets/images/shop-cart.svg" alt="Shopping cart" width="25" height="25">
                     </a>
                 </li>
-
-                <li class="search">
-                    <div class="search-wrapper">
-                        <img class="search-icon" src="/assets/images/search-icon.svg" alt="" width="25" height="25">
-                            <label for="search-input" class="visually-hidden">Search</label>
-                            <input type="search" placeholder="Search" name="search">
-                    </div>
-                </li>
-
             </ul>
+
+            <form method="GET" action="/">
+                <label for="search-input" class="search-wrapper">
+                <img class="search-icon" src="/assets/images/search-icon.svg" alt="" width="25" height="25">
+                <span class="search-label">Search</span>
+                <input type="search" name="search" id="search-input">
+                </label>
+            </form>
         </nav>
     </header>
