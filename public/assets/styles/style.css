@@ -17,6 +17,7 @@
   width: 1px;
 }
 
+/* HEADER */
 .header {
   padding-bottom: 13px;
 
@@ -41,7 +42,6 @@
   }
 }
 
-/* HEADER */
 .nav-bar {
 
 .header-list {
@@ -173,26 +173,26 @@ main {
       position: fixed;
       position-anchor: --carousel;
       position-area: block-end;
-      margin: 15px;
-      display: grid;
-      grid-auto-columns: 20px;
-      grid-auto-flow: column;
-      gap: 2px;  
+      display: flex; /* voor flexibele dot navigation */
+      gap: 10px;
     }
 
     .carousel_slide {
-      scroll-snap-align: center;
+      scroll-snap-align: start;
+      flex: 0 0 100%; /* 1 foto zien*/
 
       img {
         height: auto;
         object-fit: cover;
         aspect-ratio: 1/1;
+        border-radius: 20px;
       }
 
       &::scroll-marker {
         content: '';
         width: 10px;
         height: 10px;
+        /* height: 3px; */
         background: #E3E6FC;
         border-radius: 50px;
         transition: .6s ease-in-out;
@@ -200,7 +200,7 @@ main {
 
       &::scroll-marker:target-current {
         background: #3643ba;
-        width: 15px;
+        width: 20px;
         border-radius: 20px;
         transition: .6s ease-in-out;
       }
@@ -208,8 +208,46 @@ main {
 
     &::-webkit-scrollbar {
       overflow-x: hidden;
-    }
+    }  
   }
+
+.carousel-preview {
+  display: flex;
+  margin-top: 1.2em;
+  padding: 0;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  anchor-name: --carousel_preview;
+  gap: .5em;
+
+  scroll-marker-group: after;
+
+
+  &::-webkit-scrollbar {
+    overflow-x: hidden;
+  } 
+
+  button {
+    border: 1px solid transparent;
+    padding: 0;
+    margin: 0;
+    background: none;
+    cursor: pointer;
+  }
+
+  button.active {
+    border: 3px solid #3643ba;
+    border-radius: 20px;
+  }
+
+  img {
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+    display: block;
+    border-radius: 17px;
+  }
+}
 
   .product-info {
     padding: 1em;
