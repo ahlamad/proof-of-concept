@@ -12,8 +12,9 @@
   <h2 class="product-name">{{ product.title }}</h2>
 
   <div class="review-rating">
-    <span>★★★★☆</span>
-    <span class="rating_count">| 4 reviews</span>
+    <label for="reviews" class="visually-hidden">Reviews:</label>
+      <meter id="reviews" min="1" max="5" value="50"></meter>
+      <span class="rating_count"> 4 reviews</span>
   </div>
 
   <p>{{ product.summary }}</p>
