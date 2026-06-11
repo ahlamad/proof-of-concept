@@ -107,11 +107,11 @@
 
   .search-icon {
     margin-left: .8em;
-    color: #101010 ;
+    color: #616161 ;
   }
 
   .search-label {
-    color: #101010 ;
+    color: #616161 ;
   }
 
   input {
@@ -119,10 +119,7 @@
     outline: none;
     background: transparent;
     cursor: pointer;
-
-    &:focus::placeholder {
-      opacity: 0;
-    }
+    caret-color: #3643BA;
   }
 }
 }
@@ -193,13 +190,13 @@ main {
         width: 10px;
         height: 10px;
         /* height: 3px; */
-        background: #E3E6FC;
+        background: #3643BA;
         border-radius: 50px;
         transition: .6s ease-in-out;
       }
 
       &::scroll-marker:target-current {
-        background: #3643ba;
+        background: #262F82;
         width: 20px;
         border-radius: 20px;
         transition: .6s ease-in-out;
