@@ -21,7 +21,6 @@ function setActiveSlide(index) {
     thumbElement.classList.remove("active");
   });
 
-  // voeg active class toe aan huidige thumbnail
   thumbs[index].classList.add("active");
 
   // scroll naar de juiste slide

@@ -111,7 +111,7 @@
   }
 
   .search-label {
-    color: #616161 ;
+    color: #616161 
   }
 
   input {
@@ -182,7 +182,13 @@ main {
         height: auto;
         object-fit: cover;
         aspect-ratio: 1/1;
-        border-radius: 20px;
+        border-radius: 20px;  
+        transition: transform .2s ease;
+        
+        &:hover {
+          border-radius: 20px;
+          transform: scale(1.05);
+        }
       }
 
       &::scroll-marker {
@@ -230,10 +236,15 @@ main {
     margin: 0;
     background: none;
     cursor: pointer;
+
+    &:hover {
+      border: 3px solid #3643BA;
+      border-radius: 20px;
+    }
   }
 
-  button.active {
-    border: 3px solid #3643ba;
+  .active {
+    border: 3px solid #262F82;
     border-radius: 20px;
   }
 
@@ -243,6 +254,12 @@ main {
     aspect-ratio: 1 / 1;
     display: block;
     border-radius: 17px;
+
+
+    &:hover, &:focus-visible {
+      transform: scale(1.05);
+      border: 2.5px solid #3643BA;
+    }
   }
 }
 
