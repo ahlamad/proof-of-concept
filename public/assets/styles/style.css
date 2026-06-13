@@ -307,10 +307,15 @@ main {
     border-radius: 999px;
     margin: 2em;
     font-size: 16px;
+    outline-offset: 1px;
 
     &:hover, &:active {
       background-color: #262F82;
-      transition: ease-in-out .8s;
+      transition: ease-in-out .6s;
+    }
+
+    &:focus-visible, &:focus {
+      outline-color: #000000 ;
     }
   }
 }

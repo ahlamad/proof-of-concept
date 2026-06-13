@@ -32,7 +32,31 @@ app.get("/", async function (request, response) {
       product: productData
     });
 });
- 
+
+// PDP SAVE PRODUCT
+app.post("/cart/add", async function (request, response) {
+  // Create order
+  const orderResponse = await fetch("https://fdnd-agency.directus.app/items/decathlon_orders", {
+    method: "POST",
+    body: JSON.stringify({
+    }),
+    headers: {
+      "Content-Type": "application/json;charset=UTF-8",
+    },
+  });
+
+  // Add product as order item(s)
+  await fetch("https://fdnd-agency.directus.app/items/dechtalon_order_items", {
+    method: "POST",
+    body: JSON.stringify({
+    }),
+    headers: {
+      "Content-Type": "application/json;charset=UTF-8",
+    },
+  });
+
+  return response.redirect("/?status=added");
+});
  
 // Stel het poortnummer in waar Express op moet gaan luisteren
 app.set("port", process.env.PORT || 8000);
