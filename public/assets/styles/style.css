@@ -310,6 +310,7 @@ main {
 
     &:hover, &:active {
       background-color: #262F82;
+      transition: ease-in-out .8s;
     }
   }
 }
