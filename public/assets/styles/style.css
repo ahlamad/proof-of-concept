@@ -263,7 +263,7 @@ main {
   }
 }
 
-  .product-info {
+  .product-info-summary {
     padding: 1em;
     margin-top: 2.5em;
 
@@ -290,6 +290,26 @@ main {
     h4 {
       color: #616161;
       font-size: 12px;
+    }
+  }
+
+  .add-to-cart-button {
+    width: 85dvw;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    place-self: center;
+    cursor: pointer;
+    background-color: #3643BA;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 999px;
+    margin: 2em;
+    font-size: 16px;
+
+    &:hover, &:active {
+      background-color: #262F82;
     }
   }
 }
