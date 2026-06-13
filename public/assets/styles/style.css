@@ -28,13 +28,18 @@
   font-size: 14px;
   display: flex;
   font-weight: 400;
+  align-items: center;
+  justify-content: center;
 
   p {
     max-width: 350px;
-    justify-content: center;
     text-align: center;
-    align-items: center;
     line-height: 1.5em;
+
+    @media (min-width: 450px) {
+      max-width: unset;
+      padding: .1em;
+    }
 
     a {
       color: #FFFFFF;
@@ -175,19 +180,27 @@ main {
     }
 
     .carousel_slide {
-      scroll-snap-align: start;
+      scroll-snap-align: center;
       flex: 0 0 100%; /* 1 foto zien*/
 
+      @media (min-width: 450px) {
+        flex: unset;
+      }
+
       img {
+        width: 100%;
         height: auto;
         object-fit: cover;
         aspect-ratio: 1/1;
         border-radius: 20px;  
         transition: transform .2s ease;
-        
+              
+        @media (min-width: 450px) {
+          width: unset;
+        }
+
         &:hover {
           border-radius: 20px;
-          transform: scale(1.05);
         }
       }
 
@@ -255,7 +268,6 @@ main {
     display: block;
     border-radius: 17px;
 
-
     &:hover, &:focus-visible {
       transform: scale(1.05);
       border: 2.5px solid #3643BA;
@@ -265,13 +277,14 @@ main {
 
   .product-info-summary {
     padding: 1em;
-    margin-top: 2.5em;
 
+    p {
+      font-weight: 500;
+    }
 
     h2 {
       font-weight: 500;
       font-size: 21px;
-
     }
 
     .rating_count {
