@@ -35,20 +35,33 @@ app.get("/", async function (request, response) {
 
 // PDP SAVE PRODUCT
 app.post("/cart/add", async function (request, response) {
+  
+  const defaultStatus = ["pending"];
+
   // Create order
   const orderResponse = await fetch("https://fdnd-agency.directus.app/items/decathlon_orders", {
     method: "POST",
     body: JSON.stringify({
+      product: request.body.product_id,
+      status: defaultStatus,
     }),
     headers: {
       "Content-Type": "application/json;charset=UTF-8",
     },
   });
 
+  // zet order response om naar json
+  const orderResponseJSON = await orderResponse.json();
+  // pak id van de order eruit
+  const orderId = orderResponseJSON.data.id;
+
   // Add product as order item(s)
   await fetch("https://fdnd-agency.directus.app/items/dechtalon_order_items", {
     method: "POST",
     body: JSON.stringify({
+      order: orderId,
+      product: request.body.product_id,
+      quantity: Number(request.body.quantity),
     }),
     headers: {
       "Content-Type": "application/json;charset=UTF-8",
