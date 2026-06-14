@@ -58,6 +58,13 @@ form.addEventListener('submit', function(e) {
   button.classList.add('loading-color')
 
   setTimeout(() => {
-    form.submit()
+    button.innerHTML = `<img src="/assets/images/checkmark.svg" width="24" height="24">`
+    button.classList.remove('loading-color')
+    button.classList.add('success-color')
+    button.disabled = false
+
+    setTimeout(() => {
+      form.submit()
+    }, 1500)
   }, 1500)
 })

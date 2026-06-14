@@ -326,11 +326,11 @@ main {
     border-radius: 999px;
     margin: 2em;
     font-size: 16px;
-    outline-offset: 1px;
+    outline-offset: 1.5px;
+    transition: background-color 0.3s ease;
 
     &:hover, &:active {
       background-color: #262F82;
-      transition: ease-in-out .6s;
     }
 
     &:focus-visible, &:focus {
@@ -380,4 +380,8 @@ footer {
 
 .add-to-cart-button.loading-color {
   background-color: #616161;
+}
+
+.add-to-cart-button.success-color {
+  background-color: #017F5C;
 }
